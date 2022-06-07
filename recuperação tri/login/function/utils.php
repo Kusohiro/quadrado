@@ -1,7 +1,7 @@
 <?php
-
-    require_once("class/class quadrado.php");
-require_once("class/class tabuleiro.php");
+	require_once("../class/class usuario.php");
+    require_once("../../../class/class quadrado.php");
+	require_once("../../../class/class tabuleiro.php");
 
     function exibir_como_select($key, $dados){
         $str = "<option value=0>Escolha</option>";
@@ -19,6 +19,12 @@ require_once("class/class tabuleiro.php");
 	 function lista_tabuleiro($id){
 		 $tabuleiro = new tabuleiro("", "");
         $lista = $tabuleiro->buscar($id);
+        foreach($lista as $dados)
+            return $dados;}
+
+	function lista_usuario($id){
+		 $usuario = new usuario("", "", "", "");
+        $lista = $usuario->buscar($id);
         foreach($lista as $dados)
             return $dados;}
 
