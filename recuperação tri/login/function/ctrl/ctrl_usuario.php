@@ -18,8 +18,8 @@
 		//var_dump($usuario);
         if($id == 0){
             $usuario->insere();
-			echo $id;
-            //header("location:../../index.php");
+			//echo $id;
+            header("location:../../index.php");
         } else{
             $usuario->editar($id);
             header("location:../../index.php");
